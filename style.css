@@ -1,0 +1,180 @@
+:root {
+    --bg-light: #f8ecec;
+    --bg-dark: #222831;
+    --text-light: #000000;
+    --text-dark: #ffffff;
+    --bg-light-container: #ffffff; /* Background container chiaro */
+    --bg-dark-container: #2B3035; /* Background container scuro */
+    --blu:  #007bff;
+    --hover-blu:#0056b3;
+    --grey:#6c757d;
+}
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: var(--bg-light);
+    color: var(--text-light);
+    transition: background-color 0.8s ease-in-out, color 0.8s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.dark-mode {
+    background-color: var(--bg-dark);
+    color: var(--text-dark);
+  }
+
+  .dark-mode-container{
+    background-color: var(--bg-dark-container);
+  }
+
+ #darkModeToggle{
+  
+    border:none;
+    background-color: none !important;
+ }
+ .container {
+    background-color: var(--bg-light-container);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 100%;
+    max-width: 420px;
+    text-align: center;
+    transition: background-color 0.3s ease-in-out;
+}
+
+h2#title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: var( --blu);
+}
+
+p#disclaimer {
+    font-size: 14px;
+    color: var(--grey);
+    margin-top: 10px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+p#disclaimer a {
+    color: var( --blu);
+    text-decoration: none;
+}
+
+p#disclaimer a:hover {
+    text-decoration: underline;
+}
+
+.input_container {
+    margin-bottom: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.input_container span {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.input_container input.length {
+    width: 70%;
+    margin-left: 10px;
+}
+
+button {
+ 
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    width: 100%;
+}
+
+button#submit {
+    background-color: var( --blu);
+ color:var( --text-dark);
+    margin-bottom: 10px;
+}
+
+
+#switch{
+    padding :0;
+    width:50%;
+    background-color:transparent;
+
+   
+}
+svg{
+    
+width:50px;
+height: 30px;
+    color:yellow;
+}
+button#submit:hover {
+   
+    background-color:var(--hover-blu)
+}
+
+button#copyBtn {
+    background-color: var(--grey);
+    color: var(--text-dark);
+    cursor: not-allowed;
+}
+
+button#copyBtn:enabled {
+    background-color: #28a745;
+    cursor: pointer;
+}
+
+button#copyBtn:enabled:hover {
+    background-color: #218838;
+}
+
+p#pass {
+    font-size: 16px;
+    font-weight: 600;
+
+    background-color: var(  --bg-light);
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 20px;
+    word-wrap: break-word;
+    text-align: center;
+    display: none; /* Nascondere inizialmente */
+}
+
+p#pass.visible {
+    display: block; /* Mostrare quando la password è generata */
+}
+
+
+.password_copiata {
+    margin:0 auto;
+    height: 40px;
+    
+    border-radius: 10px;
+    background-color: var(  --bg-light);
+    border: 2px solid black;
+     text-align: center;
+  display: none;
+position: absolute;
+
+}
