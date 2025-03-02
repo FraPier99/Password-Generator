@@ -1,3 +1,4 @@
+
 :root {
     --bg-light: #f8ecec;
     --bg-dark: #222831;
@@ -176,5 +177,4 @@ p#pass.visible {
      text-align: center;
   display: none;
 position: absolute;
-
 }
